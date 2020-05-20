@@ -38,12 +38,6 @@ public class Music {
     }
     public void stop(){
         mediaPlayer.stop();
-        try {
-            mediaPlayer.prepare();
-            mediaPlayer.seekTo(0);
-        }
-        catch (Throwable t) {
-        }
     }
 
     public void mediaPlayerCreate(Context context, int musicID){

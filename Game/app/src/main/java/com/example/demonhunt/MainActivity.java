@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isSoundOn = true;
     private int musicID = R.raw.main_menu;
     private TextView musicInstance;
+    private Music music;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         musicSwitchButton = findViewById(R.id.musicSwitchButton);
         musicInstance = findViewById(R.id.musicInstance);
-        final Music music = new Music(isSoundOn);
+        music = new Music(isSoundOn);
 
         music.mediaPlayerCreate(this, musicID);
         music.play();
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 startActivity(intent);
-                music.musicStateChange(musicInstance);
+                music.stop();
             }
         });
 
@@ -46,5 +47,14 @@ public class MainActivity extends AppCompatActivity {
                 music.musicStateChange(musicInstance);
             }
         });
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        if (music.isSoundOn()){
+            music.play();
+        }
     }
 }
