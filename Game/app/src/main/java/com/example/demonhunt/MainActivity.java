@@ -2,6 +2,7 @@ package com.example.demonhunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -33,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+                startActivity(intent);
+                music.musicStateChange(musicInstance);
             }
         });
 
