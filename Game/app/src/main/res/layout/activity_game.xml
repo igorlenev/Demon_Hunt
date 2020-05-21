@@ -15,6 +15,51 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/background_image_content_description"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/list_selector_background" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/friendly1_image_content_description"
+                android:scaleType="fitStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.64"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/Bill2" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/friendly2_image_content_description"
+                android:scaleType="fitEnd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.64"
+                app:srcCompat="@drawable/Joe" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,8 +104,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
-            tools:visibility="visible">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/inventoryColumn1"
@@ -70,7 +114,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/inventoryColumn2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.25" >
+                app:layout_constraintWidth_percent="0.25">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/inventoryPlayerName"
@@ -169,7 +213,7 @@
                 app:layout_constraintHeight_percent="0.75"
                 app:layout_constraintStart_toEndOf="@id/inventoryColumn1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.375" >
+                app:layout_constraintWidth_percent="0.375">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/inventoryColumn2Player"
@@ -194,7 +238,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/west_spinner" />
+                        app:srcCompat="@drawable/west_spinner"
+                        tools:srcCompat="@drawable/sparks_sniper" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -220,7 +265,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/west_spinner" />
+                        app:srcCompat="@drawable/west_spinner"
+                        tools:srcCompat="@drawable/springfield" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -228,10 +274,10 @@
                     android:id="@+id/inventoryColumn2Friendly2"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintStart_toStartOf="@+id/inventoryColumn2"
+                    app:layout_constraintBottom_toBottomOf="@+id/inventoryColumn2"
                     app:layout_constraintEnd_toEndOf="@id/inventoryColumn2"
-                    app:layout_constraintTop_toBottomOf="@+id/inventoryColumn2Friendly1"
-                    app:layout_constraintBottom_toBottomOf="@+id/inventoryColumn2">
+                    app:layout_constraintStart_toStartOf="@+id/inventoryColumn2"
+                    app:layout_constraintTop_toBottomOf="@+id/inventoryColumn2Friendly1">
 
                     <ImageView
                         android:id="@+id/imageFriendly2Weapon1"
@@ -246,7 +292,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/west_spinner" />
+                        app:srcCompat="@drawable/west_spinner"
+                        tools:srcCompat="@drawable/auto_5" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -259,7 +306,7 @@
                 app:layout_constraintHeight_percent="0.75"
                 app:layout_constraintStart_toEndOf="@id/inventoryColumn2"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.375" >
+                app:layout_constraintWidth_percent="0.375">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/inventoryColumn3Player"
@@ -284,7 +331,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/west_spinner" />
+                        app:srcCompat="@drawable/west_spinner"
+                        tools:srcCompat="@drawable/dolch" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -311,7 +359,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/west_spinner" />
+                        app:srcCompat="@drawable/west_spinner"
+                        tools:srcCompat="@drawable/axe" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -319,10 +368,10 @@
                     android:id="@+id/inventoryColumn3Friendly2"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintStart_toStartOf="@+id/inventoryColumn3"
+                    app:layout_constraintBottom_toBottomOf="@+id/inventoryColumn3"
                     app:layout_constraintEnd_toEndOf="@id/inventoryColumn3"
-                    app:layout_constraintTop_toBottomOf="@+id/inventoryColumn3Friendly1"
-                    app:layout_constraintBottom_toBottomOf="@+id/inventoryColumn3">
+                    app:layout_constraintStart_toStartOf="@+id/inventoryColumn3"
+                    app:layout_constraintTop_toBottomOf="@+id/inventoryColumn3Friendly1">
 
                     <ImageView
                         android:id="@+id/imageFriendly2Weapon2"
@@ -337,7 +386,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/west_spinner" />
+                        app:srcCompat="@drawable/west_spinner"
+                        tools:srcCompat="@drawable/rival_short" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -351,16 +401,16 @@
                 app:layout_constraintHeight_percent="0.25"
                 app:layout_constraintStart_toEndOf="@id/inventoryColumn1"
                 app:layout_constraintTop_toBottomOf="@+id/inventoryColumn2"
-                app:layout_constraintWidth_percent="0.75" >
+                app:layout_constraintWidth_percent="0.75">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/inventoryPowerFar"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    app:layout_constraintWidth_percent="0.33"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33">
 
                     <TextView
                         android:id="@+id/powerFar"
@@ -416,28 +466,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout8"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/backgroundImage"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:contentDescription="@string/background_image_content_description"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/list_selector_background" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
