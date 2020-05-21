@@ -15,6 +15,7 @@
     <string name="friendly2_weapon2_image_content_description">Friendly2 Weapon 2 Image</string>
     <string name="friendly1_image_content_description">Friendly1 Image</string>
     <string name="friendly2_image_content_description">Friendly2 Image</string>
+    <string name="map_image_content_description">Map Image</string>
 
     <string name="i">Я</string>
     <string name="friendly_1">Билл</string>

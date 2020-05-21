@@ -44,7 +44,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHeight_percent="0.64"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/Bill2" />
+                app:srcCompat="@drawable/bill2" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -55,7 +55,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.64"
-                app:srcCompat="@drawable/Joe" />
+                app:srcCompat="@drawable/joe" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -90,6 +90,31 @@
                 app:layout_constraintEnd_toEndOf="@id/inventoryButton"
                 app:layout_constraintStart_toStartOf="@id/inventoryButton"
                 app:layout_constraintTop_toTopOf="@+id/inventoryButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mapBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/map_image_content_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/map" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -196,6 +221,10 @@
                         android:id="@+id/textView7"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
                         android:gravity="center"
                         android:text="@string/inventory_fire_power"
                         app:layout_constraintBottom_toBottomOf="parent"
