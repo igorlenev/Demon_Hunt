@@ -25,36 +25,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         startButton = findViewById(R.id.startButton);
-        musicSwitchButton = findViewById(R.id.musicSwitchButton);
+        /*musicSwitchButton = findViewById(R.id.musicSwitchButton);
         musicInstance = findViewById(R.id.musicInstance);
         music = new Music(isSoundOn);
 
         music.mediaPlayerCreate(this, musicID);
-        music.play();
+        music.play();*/
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+                intent.putExtra("isSoundOn", isSoundOn);
                 startActivity(intent);
                 music.stop();
             }
         });
 
-        musicSwitchButton.setOnClickListener(new View.OnClickListener() {
+        /*musicSwitchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 music.musicStateChange(musicInstance);
             }
-        });
-    }
-
-    @Override
-    protected void onResume(){
-        super.onResume();
-
-        if (music.isSoundOn()){
-            music.play();
-        }
+        });*/
     }
 }

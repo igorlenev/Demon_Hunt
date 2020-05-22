@@ -36,27 +36,54 @@
                 app:srcCompat="@android:drawable/list_selector_background" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/friendly1Image"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:contentDescription="@string/friendly1_image_content_description"
                 android:scaleType="fitStart"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHeight_percent="0.64"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/bill2" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/friendly2Image"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:contentDescription="@string/friendly2_image_content_description"
                 android:scaleType="fitEnd"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.64"
                 app:srcCompat="@drawable/joe" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mapBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/map_image_content_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/map" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,28 +120,35 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mapBox"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/constraintLayout9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/map_image_content_description"
+            <Button
+                android:id="@+id/musicSwitchButton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:alpha="0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/map" />
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/musicInstance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/colorPrimaryDark"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/music_is_on"
+                app:layout_constraintBottom_toBottomOf="@id/musicSwitchButton"
+                app:layout_constraintEnd_toEndOf="@id/musicSwitchButton"
+                app:layout_constraintStart_toStartOf="@id/musicSwitchButton"
+                app:layout_constraintTop_toTopOf="@+id/musicSwitchButton" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -422,7 +456,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/inventoryFireRow"
+                android:id="@+id/inventoryPowersRow"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -445,7 +479,12 @@
                         android:id="@+id/powerFar"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
                         android:gravity="center"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -466,7 +505,12 @@
                         android:id="@+id/powerMedium"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
                         android:gravity="center"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -486,7 +530,12 @@
                         android:id="@+id/powerClose"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
                         android:gravity="center"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -509,13 +558,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+            app:layout_constraintBottom_toTopOf="@+id/buttonTop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/storyText"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
@@ -529,15 +578,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout6"
+            android:id="@+id/buttonTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+            app:layout_constraintBottom_toTopOf="@+id/buttonMiddle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                android:id="@+id/choiceButton1"
+                android:id="@+id/choiceButtonTop"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:alpha="0"
@@ -547,27 +596,27 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/choiceText1"
+                android:id="@+id/choiceTextTop"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/choiceButton1"
-                app:layout_constraintEnd_toEndOf="@+id/choiceButton1"
-                app:layout_constraintStart_toStartOf="@+id/choiceButton1"
-                app:layout_constraintTop_toTopOf="@+id/choiceButton1" />
+                app:layout_constraintBottom_toBottomOf="@+id/choiceButtonTop"
+                app:layout_constraintEnd_toEndOf="@+id/choiceButtonTop"
+                app:layout_constraintStart_toStartOf="@+id/choiceButtonTop"
+                app:layout_constraintTop_toTopOf="@+id/choiceButtonTop" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout5"
+            android:id="@+id/buttonMiddle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            app:layout_constraintBottom_toTopOf="@+id/buttonBottom"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                android:id="@+id/choiceButton2"
+                android:id="@+id/choiceButtonMiddle"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:alpha="0"
@@ -577,19 +626,19 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/choiceText2"
+                android:id="@+id/choiceTextMiddle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/choiceButton2"
-                app:layout_constraintEnd_toEndOf="@+id/choiceButton2"
-                app:layout_constraintStart_toStartOf="@+id/choiceButton2"
-                app:layout_constraintTop_toTopOf="@+id/choiceButton2" />
+                app:layout_constraintBottom_toBottomOf="@+id/choiceButtonMiddle"
+                app:layout_constraintEnd_toEndOf="@+id/choiceButtonMiddle"
+                app:layout_constraintStart_toStartOf="@+id/choiceButtonMiddle"
+                app:layout_constraintTop_toTopOf="@+id/choiceButtonMiddle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
+            android:id="@+id/buttonBottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -597,7 +646,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                android:id="@+id/choiceButton3"
+                android:id="@+id/choiceButtonBottom"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:alpha="0"
@@ -607,15 +656,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/choiceText3"
+                android:id="@+id/choiceTextBottom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/choiceButton3"
-                app:layout_constraintEnd_toEndOf="@+id/choiceButton3"
-                app:layout_constraintStart_toStartOf="@+id/choiceButton3"
-                app:layout_constraintTop_toTopOf="@+id/choiceButton3" />
+                app:layout_constraintBottom_toBottomOf="@+id/choiceButtonBottom"
+                app:layout_constraintEnd_toEndOf="@+id/choiceButtonBottom"
+                app:layout_constraintStart_toStartOf="@+id/choiceButtonBottom"
+                app:layout_constraintTop_toTopOf="@+id/choiceButtonBottom" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

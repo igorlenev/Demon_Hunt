@@ -97,7 +97,6 @@
                 android:id="@+id/musicInstance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/music_is_on"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@+id/musicSwitchButton"
                 app:layout_constraintEnd_toEndOf="@+id/musicSwitchButton"
