@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 intent.putExtra("isSoundOn", isSoundOn);
                 startActivity(intent);
-                music.stop();
+                //music.stop();
             }
         });
 

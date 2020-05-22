@@ -17,6 +17,7 @@ public class GameActivity extends AppCompatActivity {
     private Music music;
     private int musicID;
     private int[] weapons = new int[6];
+    private int[] powers = new int[3];
     private int[] approximatelyPowers = new int[3];
     private TextView powerFar, powerMedium, powerClose;
     private ImageView imagePlayerWeapon1, imagePlayerWeapon2, imageFriendly1Weapon1, imageFriendly1Weapon2, imageFriendly2Weapon1, imageFriendly2Weapon2;
@@ -27,6 +28,8 @@ public class GameActivity extends AppCompatActivity {
     private ConstraintLayout mapBox, buttonTop, buttonMiddle, buttonBottom;
     private TextView storyText, choiceTextTop, choiceTextMiddle, choiceTextBottom;
     private Button choiceButtonTop, choiceButtonMiddle, choiceButtonBottom;
+    private int[][] enemyPowers = new int[3][3];
+    private int[][] enemyApproximatelyPowers = new int[3][3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +42,8 @@ public class GameActivity extends AppCompatActivity {
         musicInstance = findViewById(R.id.musicInstance);
         music = new Music(isSoundOn);
 
-        music.mediaPlayerCreate(this, musicID);
-        music.play();
+        //music.mediaPlayerCreate(this, musicID);
+        //music.play();
 
         backgroundImage = findViewById(R.id.backgroundImage);
         mapBox = findViewById(R.id.mapBox);
@@ -78,11 +81,16 @@ public class GameActivity extends AppCompatActivity {
 
         stats.generateWeapons();
         weapons = stats.getWeapons();
+        powers = stats.getPowers();
         approximatelyPowers = stats.getApproximatelyPowers();
+        enemyPowers = stats.getEnemyPowers();
+        enemyApproximatelyPowers = stats.getEnemyApproximatelyPowers();
 
         screen.setWeaponImages(imagePlayerWeapon1, imagePlayerWeapon2, imageFriendly1Weapon1, imageFriendly1Weapon2, imageFriendly2Weapon1, imageFriendly2Weapon2, weapons);
 
         screen.setPowersText(powerFar, powerMedium, powerClose, approximatelyPowers);
+
+        screen.setScreen(this, stats, backgroundImage, friendly1Image, friendly1Image, mapBox, musicID, isSoundOn, music, buttonTop, buttonMiddle, buttonBottom, storyText, choiceTextTop, choiceTextMiddle, choiceTextBottom, choiceButtonTop, choiceButtonMiddle, choiceButtonBottom, enemyPowers, enemyApproximatelyPowers, powers);
 
         inventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override

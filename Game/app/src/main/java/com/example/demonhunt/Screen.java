@@ -1,12 +1,18 @@
 package com.example.demonhunt;
 
+import android.content.Context;
+import android.view.View;
+import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class Screen {
+    private int screenID = 0;
+
     public void setPowersText(TextView powerFar, TextView powerMedium, TextView powerClose, int[] approximatelyPowers){
         if (approximatelyPowers[0] == 1){powerFar.setText("На дальней дистанции: низкая");}
         else if (approximatelyPowers[0] == 2){powerFar.setText("На дальней дистанции: средняя");}
@@ -74,7 +80,7 @@ public class Screen {
         else if (weapons[5] == 15){imageFriendly2Weapon2.setImageResource(R.drawable.rival_short);}
     }
 
-    public void setScreen(ImageView backgroundImage, ImageView friendly1Image, ImageView friendly2Image, ConstraintLayout mapBox, int musicID, boolean isSoundOn, Music music, ConstraintLayout buttonTop, ConstraintLayout buttonMiddle, ConstraintLayout buttonBottom, TextView storyText, TextView choiceTextTop, TextView choiceTextMiddle, TextView choiceTextBottom, Button choiceButtonTop, Button choiceButtonMiddle, Button choiceButtonBottom){
-
+    public void setScreen(final Context context, Stats stats,  ImageView backgroundImage, ImageView friendly1Image, ImageView friendly2Image, ConstraintLayout mapBox, int musicID, boolean isSoundOn, final Music music, ConstraintLayout buttonTop, ConstraintLayout buttonMiddle, ConstraintLayout buttonBottom, TextView storyText, TextView choiceTextTop, TextView choiceTextMiddle, final TextView choiceTextBottom, Button choiceButtonTop, Button choiceButtonMiddle, Button choiceButtonBottom, int[][] enemyPowers, int[][] enemyApproximatelyPowers, int[] powers){
+        
     }
 }
